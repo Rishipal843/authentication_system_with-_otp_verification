@@ -1,0 +1,66 @@
+/* ==========================
+   1. Modern CSS Reset
+   ========================== */
+   *,
+   *::before,
+   *::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+   
+   /* ==========================
+      2. Root & Typography Defaults
+      ========================== */
+   :root {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     line-height: 1.5;
+     font-weight: 400;
+   
+     color-scheme: light dark;
+     color: #2c3e50;
+     background-color: #f4f6f9;
+   
+     font-synthesis: none;
+     text-rendering: optimizeLegibility;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+   }
+   
+   /* ==========================
+      3. Body Base Styles
+      ========================== */
+   body {
+     margin: 0;
+     display: flex;
+     place-items: center;
+     min-width: 320px;
+     min-height: 100vh;
+     background-color: #f4f6f9;
+   }
+   
+   /* Ensure root app container spans full height */
+   #root {
+     width: 100%;
+     min-height: 100vh;
+   }
+   
+   /* ==========================
+      4. Global Element Styles
+      ========================== */
+   a {
+     font-weight: 500;
+     color: #3498db;
+     text-decoration: inherit;
+   }
+   a:hover {
+     color: #2980b9;
+   }
+   
+   button {
+     font-family: inherit;
+   }
+   
+   input {
+     font-family: inherit;
+   }

@@ -1,0 +1,231 @@
+/* ==========================
+   Light Theme Auth Styles (Login & Register)
+   ========================== */
+
+/* Container to center the card on the screen */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color-scheme: light;
+}
+
+/* Card wrapper for the contents */
+.auth-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Heading styling */
+.auth-card h1 {
+  margin-bottom: 24px;
+  font-size: 26px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+/* Error message banner */
+.auth-card .error {
+  background-color: #ffe6e6;
+  color: #d9534f;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: left;
+  border: 1px solid #f5c6cb;
+}
+
+/* Form layout */
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Input Group with Labels */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Inputs styling */
+.auth-card input {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.auth-card input::placeholder {
+  color: #a4b0be;
+}
+
+.auth-card input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Password Field Wrapper */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 48px;
+  box-sizing: border-box;
+}
+
+/* Specific Toggle Button Styling (Fixes the full-width bug) */
+.auth-card .password-wrapper .toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent !important;
+  color: #64748b !important;
+  border: none !important;
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card .password-wrapper .toggle-password-btn:hover {
+  background: transparent !important;
+  color: #0f172a !important;
+}
+
+/* Primary Submit Button styling */
+.auth-card button[type="submit"],
+.auth-card form > button:not(.toggle-password-btn) {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-card button:hover:not(:disabled):not(.toggle-password-btn) {
+  background-color: #2980b9;
+}
+
+.auth-card button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Checklist Styles Matching Image Reference */
+.password-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  margin-top: -6px;
+  margin-bottom: 4px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #64748b;
+  transition: color 0.2s;
+}
+
+/* Unchecked Radio Bullet Style */
+.radio-bullet {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* Checked State Style */
+.check-item.checked {
+  color: #10b981;
+  font-weight: 500;
+}
+
+.check-item.checked .radio-bullet {
+  border-color: #10b981;
+  background-color: #10b981;
+  box-shadow: inset 0 0 0 3px #ffffff;
+}
+
+/* Links (Forgot Password, Register) */
+.auth-card a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+.auth-card > a {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+/* Paragraph text & helper links */
+.auth-card p {
+  font-size: 14px;
+  color: #718093;
+  margin: 12px 0;
+}
+
+/* "OR" divider text */
+.auth-card p:nth-last-of-type(1) {
+  margin: 16px 0;
+  position: relative;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #a4b0be;
+}

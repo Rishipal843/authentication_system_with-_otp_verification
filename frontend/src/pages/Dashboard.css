@@ -1,0 +1,93 @@
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color-scheme: light;
+  color: #2c3e50;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Avatar */
+.dashboard-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px auto;
+  border: 2px solid #3498db;
+}
+
+/* Headings & Text */
+.dashboard-card h1 {
+  font-size: 24px;
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.welcome-text {
+  font-size: 15px;
+  color: #718093;
+  margin-bottom: 24px;
+}
+
+/* User Details Section */
+.user-details {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.detail-row .label {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.detail-row .value {
+  color: #0f172a;
+  font-weight: 500;
+}
+
+/* Logout Button */
+.logout-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
