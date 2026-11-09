@@ -39,17 +39,40 @@ app.use(
 );
 
 
+// app.use(
+//   cors({
+
+//     origin:
+//       process.env.FRONTEND_URL,
+
+//     credentials:
+//       true,
+
+//   })
+// );
+
+
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "https://authentication-system-with-otp-veri-one.vercel.app",
+  "http://localhost:5173" // for local development
+];
+
 app.use(
   cors({
-
-    origin:
-      process.env.FRONTEND_URL,
-
-    credentials:
-      true,
-
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps, curl, Postman)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        return callback(new Error('Not allowed by CORS'), false);
+      }
+      return callback(null, true);
+    },
+    credentials: true,
   })
 );
+
+
 
 
 // TEST ROUTE
